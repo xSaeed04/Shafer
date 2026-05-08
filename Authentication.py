@@ -45,17 +45,14 @@ def show_login_page(root):
     tk.Label(root, text="Shafer🔒", font=("Arial", 24, "bold"),
              bg=BG_COLOR, fg=TEXT_COLOR).pack(pady=20)
 
-    tk.Label(root, text="Login", font=("Arial", 16),
-             bg=BG_COLOR, fg=TEXT_COLOR).pack(pady=10)
+    tk.Label(root, text="Login", font=("Arial", 16),bg=BG_COLOR, fg=TEXT_COLOR).pack(pady=10)
 
-    tk.Label(root, text="Username",
-             bg=BG_COLOR, fg=TEXT_COLOR).pack()
+    tk.Label(root, text="Username",bg=BG_COLOR, fg=TEXT_COLOR).pack()
 
     username = tk.Entry(root, width=30)
     username.pack(pady=5)
 
-    tk.Label(root, text="Password",
-             bg=BG_COLOR, fg=TEXT_COLOR).pack()
+    tk.Label(root, text="Password",bg=BG_COLOR, fg=TEXT_COLOR).pack()
 
     password = tk.Entry(root, width=30, show="*")
     password.pack(pady=5)
@@ -69,13 +66,9 @@ def show_login_page(root):
         else:
             messagebox.showerror("Error", "Invalid username or password")
 
-    tk.Button(root, text="Login", width=20,
-              bg="white", fg="black",
-              command=login).pack(pady=10)
+    tk.Button(root, text="Login", width=20,bg="white", fg="black",command=login).pack(pady=10)
 
-    tk.Button(root, text="Create Account", width=20,
-              bg="white", fg="black",
-              command=lambda: show_register_page(root)).pack(pady=5)
+    tk.Button(root, text="Create Account", width=20,bg="white", fg="black",command=lambda: show_register_page(root)).pack(pady=5)
 # ------------------------------- Register Page -------------------------------
 def show_register_page(root):
     clear_window(root)
@@ -145,10 +138,10 @@ def show_main_menu(root):
     tk.Button(root, text="Classical Cryptography", width=25,
               bg="white", fg="black",command=lambda: show_classical_menu(root, show_main_menu)).pack(pady=5)
 
-    tk.Button(root, text="Symmetric Encryption", width=25,
+    tk.Button(root, text="Symmetric", width=25,
               bg="white", fg="black",command=lambda: show_symmetric_menu(root, show_main_menu)).pack(pady=5)
 
-    tk.Button(root, text="RSA Encryption", width=25,
+    tk.Button(root, text="Asymmetric", width=25,
               bg="white", fg="black",command=lambda: show_rsa_page(root, show_main_menu)).pack(pady=5)
 
     tk.Button(root, text="Hash & MAC", width=25,
